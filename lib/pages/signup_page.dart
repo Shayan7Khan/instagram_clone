@@ -1,12 +1,12 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/pages/signup_page.dart';
+import 'package:instagram_clone/pages/login_page.dart';
 import 'package:instagram_clone/widgets/reuseable_text_form_field.dart';
 
-class LoginPage extends StatelessWidget {
+class SignupPage extends StatelessWidget {
   late double deviceHeight;
   late double deviceWidth;
-  LoginPage({super.key});
+  SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,11 @@ class LoginPage extends StatelessWidget {
         appBar: AppBar(
           leading: Padding(
             padding: const EdgeInsets.symmetric(vertical: 25),
-            child: BackButton(),
+            child: BackButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
         ),
         body: SingleChildScrollView(
@@ -38,22 +42,10 @@ class LoginPage extends StatelessWidget {
                 ReuseableTextFormField(hintText: 'Email'),
                 SizedBox(height: deviceHeight * .024),
                 ReuseableTextFormField(hintText: 'Password'),
-                SizedBox(height: deviceHeight * .020),
-                Align(
-                  alignment: AlignmentGeometry.bottomRight,
-                  child: InkWell(
-                    onTap: () {},
-                    child: Text(
-                      "Forgot Password?",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
                 SizedBox(height: deviceHeight * .024),
+                ReuseableTextFormField(hintText: 'Confirm Passowrd'),
+                SizedBox(height: deviceHeight * .05),
+
                 ElevatedButton(
                   onPressed: () {},
 
@@ -71,35 +63,12 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   child: Text(
-                    "Log In",
+                    "Sign Up",
                     style: Theme.of(context).textTheme.labelSmall!.copyWith(
                       color: Colors.white,
                       fontSize: 16,
                     ),
                   ),
-                ),
-                SizedBox(height: deviceHeight * .05),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.facebook, color: Colors.blueAccent),
-                    SizedBox(width: deviceWidth * .025),
-                    InkWell(
-                      onTap: () {
-                        if (kDebugMode) {
-                          print("Log in with Facebook");
-                        }
-                      },
-                      child: Text(
-                        "Log in with Facebook",
-                        style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                          color: Colors.blueAccent,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
                 SizedBox(height: deviceHeight * .05),
 
@@ -124,16 +93,16 @@ class LoginPage extends StatelessWidget {
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => SignupPage()),
+                      MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   },
                   child: RichText(
                     text: TextSpan(
                       style: Theme.of(context).textTheme.bodyMedium,
                       children: [
-                        TextSpan(text: "Don't have an account ? "),
+                        TextSpan(text: "Alerady have an account ? "),
                         TextSpan(
-                          text: "Sign up.",
+                          text: "Log in.",
                           style: TextStyle(
                             color: Colors.blueAccent,
                             fontWeight: FontWeight.bold,
