@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Instagram Clone',
       theme: instagramTheme,
+      debugShowCheckedModeBanner: false,
       home: LoginPage(),
     );
   }
