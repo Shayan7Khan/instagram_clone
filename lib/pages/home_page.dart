@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
         body: ListView.builder(
-          itemCount: posts.length + 2, // +2 for stories and dividers
+          itemCount: posts.length + 2, 
           itemBuilder: (context, index) {
             if (index == 0) {
               // Stories section
