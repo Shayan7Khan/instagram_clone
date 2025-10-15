@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/home_page.dart';
 import 'package:instagram_clone/pages/likes_page.dart';
+import 'package:instagram_clone/pages/profile_page.dart';
 import 'package:instagram_clone/pages/search_page.dart';
 import 'package:instagram_clone/widgets/reusable_bottom_navigation_bar.dart';
 
@@ -17,7 +18,7 @@ class _MainScreenState extends State<MainScreen> {
     SearchPage(),
     Center(child: Text('posts')),
     LikesPage(),
-    Center(child: Text('profile')),
+    ProfilePage(),
   ];
 
   int selectedIndex = 0;
