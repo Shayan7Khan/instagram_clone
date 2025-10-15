@@ -6,7 +6,7 @@ import 'package:instagram_clone/widgets/reuseable_text_form_field.dart';
 
 class LoginPage extends StatelessWidget {
    
-  LoginPage({super.key});
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {

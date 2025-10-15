@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/home_page.dart';
+import 'package:instagram_clone/pages/likes_page.dart';
 import 'package:instagram_clone/pages/search_page.dart';
 import 'package:instagram_clone/widgets/reusable_bottom_navigation_bar.dart';
 
@@ -15,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
     HomePage(),
     SearchPage(),
     Center(child: Text('posts')),
-    Center(child: Text('like')),
+    LikesPage(),
     Center(child: Text('profile')),
   ];
 

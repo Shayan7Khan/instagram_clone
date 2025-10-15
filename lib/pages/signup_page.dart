@@ -1,17 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/login_page.dart';
 import 'package:instagram_clone/widgets/reusable_elevated_button.dart';
 import 'package:instagram_clone/widgets/reuseable_text_form_field.dart';
 
 class SignupPage extends StatelessWidget {
-
-  SignupPage({super.key});
+  const SignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-   final deviceHeight = MediaQuery.of(context).size.height;
-   final deviceWidth = MediaQuery.of(context).size.width;
+    final deviceHeight = MediaQuery.of(context).size.height;
+    final deviceWidth = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -46,7 +44,11 @@ class SignupPage extends StatelessWidget {
                 ReuseableTextFormField(hintText: 'Confirm Passowrd'),
                 SizedBox(height: deviceHeight * .05),
 
-                ReusableElevatedButton(name: 'Sign Up', deviceHeight: deviceHeight, deviceWidth: deviceWidth,),
+                ReusableElevatedButton(
+                  name: 'Sign Up',
+                  deviceHeight: deviceHeight,
+                  deviceWidth: deviceWidth,
+                ),
                 SizedBox(height: deviceHeight * .05),
 
                 Row(

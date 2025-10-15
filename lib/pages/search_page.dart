@@ -40,7 +40,7 @@ class _SearchPageState extends State<SearchPage> {
                     child: TextField(
                       autofocus: false,
                       decoration: InputDecoration(
-                        fillColor: Color(0xFFdbdbde),
+                        fillColor: Colors.grey[100],
                         filled: true,
 
                         isDense: true,

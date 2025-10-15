@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/pages/likes_page.dart';
 import 'package:instagram_clone/pages/login_page.dart';
-import 'package:instagram_clone/pages/search_page.dart';
 import 'package:instagram_clone/utils/theme.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Instagram Clone',
       theme: instagramTheme,
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: LikesPage(),
     );
   }
 }

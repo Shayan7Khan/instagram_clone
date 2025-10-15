@@ -5,7 +5,7 @@ class ReusableElevatedButton extends StatelessWidget {
   final String name;
    final double deviceHeight;
    final double deviceWidth;
-  ReusableElevatedButton({super.key, required this.name, required this.deviceHeight, required this.deviceWidth});
+  const ReusableElevatedButton({super.key, required this.name, required this.deviceHeight, required this.deviceWidth});
 
   @override
   Widget build(BuildContext context) {
