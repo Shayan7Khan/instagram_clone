@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone/pages/home_page.dart';
+import 'package:instagram_clone/pages/search_page.dart';
 import 'package:instagram_clone/widgets/reusable_bottom_navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {
@@ -12,7 +13,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pages = [
     HomePage(),
-    Center(child: Text('search')),
+    SearchPage(),
     Center(child: Text('posts')),
     Center(child: Text('like')),
     Center(child: Text('profile')),
@@ -30,8 +31,10 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _pages[selectedIndex],
-      bottomNavigationBar: ReusableBottomNavigationBar(currentIndex: selectedIndex, onTap: onItemTapped,
-      )
+      bottomNavigationBar: ReusableBottomNavigationBar(
+        currentIndex: selectedIndex,
+        onTap: onItemTapped,
+      ),
     );
   }
 }

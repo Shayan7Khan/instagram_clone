@@ -10,34 +10,34 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final List<Map<String, dynamic>> users = [
-    {'name': 'Ronaldo', 'image': 'assets/pic_1.jpg'},
-    {'name': 'Messi', 'image': 'assets/pic_2.jpg'},
-    {'name': 'Mbappe', 'image': 'assets/pic_3.jpg'},
-    {'name': 'Iniesta', 'image': 'assets/pic_4.jpg'},
-    {'name': 'Ramos', 'image': 'assets/pic_5.jpg'},
-    {'name': 'Zlatan', 'image': 'assets/pic_6.jpg'},
-    {'name': 'Bale', 'image': 'assets/pic_7.jpg'},
-    {'name': 'Neymar', 'image': 'assets/pic_8.jpg'},
-    {'name': 'Xavi', 'image': 'assets/pic_9.jpg'},
-    {'name': 'Zidane', 'image': 'assets/pic_10.jpg'},
+    {'name': 'Ronaldo', 'image': 'assets/pic/pic_1.jpg'},
+    {'name': 'Messi', 'image': 'assets/pic/pic_2.jpg'},
+    {'name': 'Mbappe', 'image': 'assets/pic/pic_3.jpg'},
+    {'name': 'Iniesta', 'image': 'assets/pic/pic_4.jpg'},
+    {'name': 'Ramos', 'image': 'assets/pic/pic_5.jpg'},
+    {'name': 'Zlatan', 'image': 'assets/pic/pic_6.jpg'},
+    {'name': 'Bale', 'image': 'assets/pic/pic_7.jpg'},
+    {'name': 'Neymar', 'image': 'assets/pic/pic_8.jpg'},
+    {'name': 'Xavi', 'image': 'assets/pic/pic_9.jpg'},
+    {'name': 'Zidane', 'image': 'assets/pic/pic_10.jpg'},
   ];
 
   final List<Map<String, dynamic>> posts = [
     {
       'userName': 'Ronaldo',
-      'userImage': 'assets/pic_1.jpg',
+      'userImage': 'assets/pic/pic_1.jpg',
       'location': 'Peshawar, Pakistan',
       'postImage': 'assets/pic_10.jpg',
     },
     {
       'userName': 'Messi',
-      'userImage': 'assets/pic_2.jpg',
+      'userImage': 'assets/pic/pic_2.jpg',
       'location': 'Lahore, Pakistan',
       'postImage': 'assets/pic_9.jpg',
     },
     {
       'userName': 'Neymar',
-      'userImage': 'assets/pic_8.jpg',
+      'userImage': 'assets/pic/pic_8.jpg',
       'location': 'Karachi, Pakistan',
       'postImage': 'assets/pic_7.jpg',
     },
