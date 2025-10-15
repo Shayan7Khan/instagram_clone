@@ -263,9 +263,25 @@ class _LikesPageState extends State<LikesPage> {
                           ),
                           SizedBox(width: 10),
 
-                          ElevatedButton(
+                         ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Color(0xFFFFFFFF),
+                              ),
+                            ),
                             onPressed: () {},
-                            child: Text("Message"),
+                            child: Text(
+                              "Message",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ],
                       ),
@@ -282,7 +298,7 @@ class _LikesPageState extends State<LikesPage> {
                             child: RichText(
                               text: TextSpan(
                                 style: TextStyle(
-                                  color: Colors.black, // 👈 important
+                                  color: Colors.black, 
                                   fontSize: 14,
                                 ),
                                 children: [
@@ -305,9 +321,25 @@ class _LikesPageState extends State<LikesPage> {
                           SizedBox(width: 10),
 
                           // Post thumbnail on right
-                          ElevatedButton(
+                         ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Colors.white,
+                              ),
+                            ),
                             onPressed: () {},
-                            child: Text("Message"),
+                            child: Text(
+                              "Message",
+                              style: TextStyle(color: Colors.black),
+                            ),
                           ),
                         ],
                       ),
@@ -334,11 +366,8 @@ class _LikesPageState extends State<LikesPage> {
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
-                                 
 
-                                  TextSpan(
-                                    text: "started following you",
-                                  ),
+                                  TextSpan(text: "started following you"),
                                   TextSpan(
                                     text: " 6d ",
                                     style: TextStyle(color: Colors.grey),
@@ -351,8 +380,24 @@ class _LikesPageState extends State<LikesPage> {
 
                           // Post thumbnail on right
                           ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Color(0xFF3797EF),
+                              ),
+                            ),
                             onPressed: () {},
-                            child: Text("Follow"),
+                            child: Text(
+                              "Follow",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ],
                       ),
@@ -361,6 +406,200 @@ class _LikesPageState extends State<LikesPage> {
                 ),
               ),
               Divider(),
+               SizedBox(
+                height: deviceHeight * .3,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 3,
+                    horizontal: 16,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "This Month",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      SizedBox(height: deviceHeight * .023),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: deviceHeight * .025,
+                            backgroundImage: AssetImage('assets/pic/pic_5.jpg'),
+                          ),
+
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  color: Colors.black, // 👈 important
+                                  fontSize: 14,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: ' Messi ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+
+                                  TextSpan(text: "requested to follow you. "),
+                                  TextSpan(
+                                    text: "2w",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10),
+
+                          ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Color(0xFF3797EF),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              "Accept",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: deviceHeight * .02),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: deviceHeight * .025,
+                            backgroundImage: AssetImage('assets/pic/pic_3.jpg'),
+                          ),
+
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'Moulana Tariq Jameel ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+
+                                  TextSpan(text: "started following you. "),
+                                  TextSpan(
+                                    text: "1w",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10),
+
+                          // Post thumbnail on right
+                          ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Colors.white,
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              "Message",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: deviceHeight * .02),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: deviceHeight * .025,
+                            backgroundImage: AssetImage('assets/pic/pic_8.jpg'),
+                          ),
+
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: RichText(
+                              text: TextSpan(
+                                style: TextStyle(
+                                  color: Colors.black, // 👈 important
+                                  fontSize: 14,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'Ajeeb Admi ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+
+                                  TextSpan(text: "started following you"),
+                                  TextSpan(
+                                    text: " 6d ",
+                                    style: TextStyle(color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10),
+
+                          // Post thumbnail on right
+                          ElevatedButton(
+                            style: ButtonStyle(
+                              shape: WidgetStatePropertyAll(
+                                RoundedRectangleBorder(
+                                  borderRadius: BorderRadiusGeometry.circular(
+                                    8,
+                                  ),
+                                ),
+                              ),
+
+                              backgroundColor: WidgetStatePropertyAll<Color>(
+                                Color(0xFF3797EF),
+                              ),
+                            ),
+                            onPressed: () {},
+                            child: Text(
+                              "Follow",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

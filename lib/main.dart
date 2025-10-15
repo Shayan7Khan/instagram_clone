@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Instagram Clone',
       theme: instagramTheme,
       debugShowCheckedModeBanner: false,
-      home: LikesPage(),
+      home: LoginPage(),
     );
   }
 }
