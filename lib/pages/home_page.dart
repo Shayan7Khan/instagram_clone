@@ -27,19 +27,19 @@ class _HomePageState extends State<HomePage> {
       'userName': 'Ronaldo',
       'userImage': 'assets/pic/pic_1.jpg',
       'location': 'Peshawar, Pakistan',
-      'postImage': 'assets/pic_10.jpg',
+      'postImage': 'assets/posts/post_4.jpg',
     },
     {
       'userName': 'Messi',
-      'userImage': 'assets/pic/pic_2.jpg',
+      'userImage': 'assets/pic/pic_5.jpg',
       'location': 'Lahore, Pakistan',
-      'postImage': 'assets/pic_9.jpg',
+      'postImage': 'assets/posts/post_1.jpg',
     },
     {
       'userName': 'Neymar',
       'userImage': 'assets/pic/pic_8.jpg',
       'location': 'Karachi, Pakistan',
-      'postImage': 'assets/pic_7.jpg',
+      'postImage': 'assets/posts/post_9.jpg',
     },
   ];
 
