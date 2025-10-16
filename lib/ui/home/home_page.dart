@@ -43,7 +43,6 @@ class _HomePageState extends State<HomePage> {
     },
   ];
 
-
   @override
   Widget build(BuildContext context) {
     final deviceHeight = MediaQuery.of(context).size.height;
@@ -68,64 +67,60 @@ class _HomePageState extends State<HomePage> {
             IconButton(onPressed: () {}, icon: Icon(Icons.send_outlined)),
           ],
         ),
-        body: ListView.builder(
-          itemCount: posts.length + 2, 
-          itemBuilder: (context, index) {
-            if (index == 0) {
-              // Stories section
-              return Column(
-                children: [
-                  Divider(thickness: 0.5),
-                  SizedBox(
-                    height: deviceHeight * .129,
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: users.length,
-                      itemBuilder: (context, i) {
-                        final user = users[i];
-                        return Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: deviceHeight * .035,
-                                backgroundImage: AssetImage(user['image']),
-                              ),
-                              SizedBox(height: deviceHeight * .01),
-                              Text(
-                                user['name'],
-                                style:
-                                    Theme.of(context).textTheme.bodyMedium,
-                              ),
-                            ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Divider(thickness: 0.5),
+              SizedBox(
+                height: deviceHeight * .129,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: users.length,
+                  itemBuilder: (context, i) {
+                    final user = users[i];
+                    return Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                            radius: deviceHeight * .035,
+                            backgroundImage: AssetImage(user['image']),
                           ),
-                        );
-                      },
-                    ),
-                  ),
-                  Divider(thickness: 0.5),
-                ],
-              );
-            } else if (index - 1 < posts.length) {
-              // Posts
-              final post = posts[index - 1];
-              return ReuseablePostCard(
-                userName: post['userName'],
-                userImage: post['userImage'],
-                location: post['location'],
-                postImage: post['postImage'],
-                deviceHeight: deviceHeight,
-                deviceWidth: deviceWidth,
-              );
-            } else {
-              // Bottom padding
-              return SizedBox(height: deviceHeight * 0.05);
-            }
-          },
+                          SizedBox(height: deviceHeight * .01),
+                          Text(
+                            user['name'],
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              Divider(thickness: 0.5),
+
+              ListView.builder(
+                itemCount: posts.length,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, i) {
+                  final post = posts[i];
+                  return ReuseablePostCard(
+                    userName: post['userName'],
+                    userImage: post['userImage'],
+                    location: post['location'],
+                    postImage: post['postImage'],
+                    deviceHeight: deviceHeight,
+                    deviceWidth: deviceWidth,
+                  );
+                },
+              ),
+              SizedBox(height: deviceHeight * 0.02),
+            ],
+          ),
         ),
       ),
     );
-  
   }
 }

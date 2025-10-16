@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/pages/home_page.dart';
-import 'package:instagram_clone/pages/likes_page.dart';
-import 'package:instagram_clone/pages/profile_page.dart';
-import 'package:instagram_clone/pages/search_page.dart';
+import 'package:instagram_clone/ui/home/home_page.dart';
+import 'package:instagram_clone/ui/likes/likes_page.dart';
+import 'package:instagram_clone/ui/profile/profile_page.dart';
+import 'package:instagram_clone/ui/search%20/search_page.dart';
 import 'package:instagram_clone/widgets/reusable_bottom_navigation_bar.dart';
 
 class MainScreen extends StatefulWidget {

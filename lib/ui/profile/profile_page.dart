@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone/widgets/drawer.dart';
 import 'package:instagram_clone/widgets/reusable_column_for_followers.dart';
 import 'package:instagram_clone/widgets/reusable_story_avatar.dart';
 
@@ -35,6 +36,7 @@ final List<Map<String, String>> _images = [
 
     return SafeArea(
       child: Scaffold(
+        endDrawer: MyDrawer(),
         backgroundColor: Colors.white,
         body: CustomScrollView(
           slivers: [
@@ -60,12 +62,7 @@ final List<Map<String, String>> _images = [
                   ),
                 ],
               ),
-              actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.menu, size: 30, color: Colors.black),
-                ),
-              ],
+              
             ),
 
             //  PROFILE HEADER 

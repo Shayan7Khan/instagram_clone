@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/pages/signup_page.dart';
+import 'package:instagram_clone/ui/auth/signup_page.dart';
 import 'package:instagram_clone/widgets/reusable_elevated_button.dart';
 import 'package:instagram_clone/widgets/reuseable_text_form_field.dart';
 

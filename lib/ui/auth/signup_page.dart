@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_clone/pages/login_page.dart';
+import 'package:instagram_clone/ui/auth/login_page.dart';
 import 'package:instagram_clone/widgets/reusable_elevated_button.dart';
 import 'package:instagram_clone/widgets/reuseable_text_form_field.dart';
 
